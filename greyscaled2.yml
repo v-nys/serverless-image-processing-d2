@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://jaws2paws.com
+functions:
+  greyscaled2:
+    lang: node18
+    handler: ./greyscaled2
+    image: vincentnys/greyscaled2:latest
+
