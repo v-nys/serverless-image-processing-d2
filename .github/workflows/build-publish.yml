@@ -17,5 +17,5 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       # effectief bouwen van de functie zoals je dat lokaal doet
-      - name: Build function only
-        run: faas-cli build -f greyscaled2.yml
+      - name: Build and publish function
+        run: faas-cli up -f greyscaled2.yml
