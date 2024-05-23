@@ -23,6 +23,7 @@ jobs:
         with:
           username: vincentnys
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      # effectief bouwen van de functie zoals je dat lokaal doet
+      - name: Login faasd
+        run: faas-cli login -u admin --password ${{ secrets.FAASD_PASSWORD }}
       - name: Build and publish function
         run: faas-cli up -f greyscaled2.yml
