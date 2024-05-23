@@ -24,6 +24,6 @@ jobs:
           username: vincentnys
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login faasd
-        run: faas-cli login -u admin --password ${{ secrets.FAASD_PASSWORD }}
+        run: faas-cli login -u admin --password ${{ secrets.FAASD_PASSWORD }} --gateway https://jaws2paws.com
       - name: Build and publish function
         run: faas-cli up -f greyscaled2.yml
