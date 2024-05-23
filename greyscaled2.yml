@@ -7,4 +7,5 @@ functions:
     lang: node18
     handler: ./greyscaled2
     image: vincentnys/greyscaled2:latest
-
+    env:
+      NODE_ENV: production
