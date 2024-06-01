@@ -31,8 +31,8 @@ jobs:
         uses: hilarion5/send-mail@v1
         with:
           smtp-server: smtp.gmail.com
-          smtp-port: 465
-          smtp-secure: true
+          smtp-port: 587
+          smtp-secure: false
           from-email: cloudsystemen2024@gmail.com
           to-email: cloudsystemen2024@gmail.com
           username: cloudsystemen2024@gmail.com
