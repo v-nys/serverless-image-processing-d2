@@ -27,3 +27,18 @@ jobs:
         run: faas-cli login -u admin --password ${{ secrets.FAASD_PASSWORD }} --gateway https://jaws2paws.com
       - name: Build and publish function
         run: faas-cli up -f greyscaled2.yml
+      - name: Send Email
+        uses: hilarion5/send-mail@v1
+        with:
+          smtp-server: smtp.gmail.com
+          smtp-port: 465
+          smtp-secure: true
+          from-email: cloudsystemen2024@gmail.com
+          to-email: cloudsystemen2024@gmail.com
+          username: cloudsystemen2024@gmail.com
+          password: ${{ secrets.GMAIL_PASSWORD }}
+          subject: Test Email
+          body: This is a test email sent from GitHub Actions.
+          html: |
+            <h1>This is a test email</h1>
+            <p>Test Paragraph</p>
